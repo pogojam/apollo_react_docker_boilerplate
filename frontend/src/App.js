@@ -7,6 +7,7 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import { setContext } from "apollo-link-context";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { Auth } from "./components/auth/index";
+// import { Provider as MobxProvider } from "mobx-react";
 import theme from "./theme";
 import "./filebase/config";
 import "./css/App.css";

@@ -1,6 +1,7 @@
 import React from "react";
+import { observer } from "mobx-react-lite";
 import { AppBar, Tabs, Tab } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
+import LayoutStore from "../../../state/stors/Layout_Store";
 
 const NavItems = [
   {
@@ -10,18 +11,19 @@ const NavItems = [
     name: "Contact",
   },
 ];
-export const Nav = () => {
-  const handleClick = (name) => (e) => {};
-  const handleChange = (e, newValue) => {};
-
-  const history = useHistory();
+export const Nav = observer(() => {
+  const handleChange = (e, newValue) => {
+    store.changePage(newValue);
+    console.log(store);
+  };
+  const store = LayoutStore;
   return (
     <AppBar>
-      <Tabs value={value} onChange={handleChange}>
-        {NavItems.map(({ name }) => (
-          <Tab value={"/" + name} label={name} />
+      <Tabs value={store.page} onChange={handleChange}>
+        {NavItems.map(({ name }, i) => (
+          <Tab value={i} label={name} />
         ))}
       </Tabs>
     </AppBar>
   );
-};
+});

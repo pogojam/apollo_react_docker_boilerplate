@@ -8,6 +8,9 @@ import {
 import { Dash, Login } from "../pages";
 import { Nav } from "../components/blocks/nav/Nav_Block";
 import { Auth } from "../components/auth/index";
+import { Drawer } from "@material-ui/core";
+import store from "../state/stors/Layout_Store";
+import { observer } from "mobx-react-lite";
 
 const PrivateRoutes = ({ User, children }) => {
   return (
@@ -23,7 +26,7 @@ const PrivateRoutes = ({ User, children }) => {
   );
 };
 
-const AppRouter = () => {
+const AppRouter = observer(() => {
   const { User, handleLogout } = Auth.useContainer();
   const withUser = useCallback((Component) => () => <Component User={User} />, [
     User,
@@ -31,6 +34,9 @@ const AppRouter = () => {
   return (
     <Router>
       <Nav isLoggedIn={User} logout={handleLogout} />
+      <Drawer anchor={store.drawer.side} open={store.drawer.isOpen}>
+        {store.Component}
+      </Drawer>
       <Switch>
         <Route path="/Login" component={Login} />
         <PrivateRoutes User={User}>
@@ -39,6 +45,6 @@ const AppRouter = () => {
       </Switch>
     </Router>
   );
-};
+});
 
 export default AppRouter;
