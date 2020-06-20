@@ -1,14 +1,20 @@
-const theme = {
-  fonts: {
-    body: "system-ui, sans-serif",
-    heading: '"Avenir Next", sans-serif',
-    monospace: "Menlo, monospace"
+export default {
+  backgrounds: {
+    main: " linear-gradient(180deg, #326CED 0%, #63A6F8 100%)",
   },
-  colors: {
-    text: "#000",
-    background: "#fff",
-    primary: "#33e"
-  }
+  palette: {
+    primary: {
+      main: "#FF7F11",
+      contrastText: "#ffffff",
+    },
+    secondary: {
+      main: "#4281B2",
+      contrastText: "#ffffff",
+    },
+    error: {
+      main: "#e50000",
+      contrastText: "#ffffff",
+    },
+  },
+  overrides: {},
 };
-
-export default theme;

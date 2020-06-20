@@ -17,7 +17,7 @@ html {
 }
 .App {
   text-align: center;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(
     322deg,
     rgba(0, 0, 0, 1) 0%,

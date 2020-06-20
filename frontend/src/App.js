@@ -5,7 +5,9 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { createUploadLink } from "apollo-upload-client";
 import { ApolloProvider } from "@apollo/react-hooks";
 import { setContext } from "apollo-link-context";
+import { ThemeProvider } from "@material-ui/core/styles";
 import { Auth } from "./components/auth/index";
+import theme from "./theme";
 import "./filebase/config";
 import "./css/App.css";
 
@@ -30,10 +32,12 @@ export const client = new ApolloClient({
 
 function App() {
   return (
-    <div style={{ overflowY: "scroll" }} className="App">
+    <div className="App">
       <Auth.Provider>
         <ApolloProvider client={client}>
-          <AppRouter />
+          <ThemeProvider theme={theme}>
+            <AppRouter />
+          </ThemeProvider>
         </ApolloProvider>
       </Auth.Provider>
     </div>
