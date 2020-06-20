@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "path": "Dash",
+      "name": "Dash"
+    },
+    {
+      "path": "Movies",
+      "name": "Movies"
+    },
+    {
+      "path": "Music",
+      "name": "Music"
+    },
+    {
+      "path": "Storage",
+      "name": "Storage"
+    },
+    {
+      "path": "Login",
+      "name": "Login"
+    }
+  ]
+}
