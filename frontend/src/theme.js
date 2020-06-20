@@ -1,4 +1,6 @@
-export default {
+import { createMuiTheme } from "@material-ui/core/styles";
+
+export default createMuiTheme({
   backgrounds: {
     main: " linear-gradient(180deg, #326CED 0%, #63A6F8 100%)",
   },
@@ -17,4 +19,4 @@ export default {
     },
   },
   overrides: {},
-};
+});

@@ -11,17 +11,15 @@ const NavItems = [
   },
 ];
 export const Nav = () => {
-  const handleClick = (name) => (e) => {
-    console.log(e.target.value);
-    console.log(name);
-  };
+  const handleClick = (name) => (e) => {};
+  const handleChange = (e, newValue) => {};
 
   const history = useHistory();
   return (
     <AppBar>
-      <Tabs>
+      <Tabs value={value} onChange={handleChange}>
         {NavItems.map(({ name }) => (
-          <Tab value={"/" + name} label={name} onClick={handleClick(name)} />
+          <Tab value={"/" + name} label={name} />
         ))}
       </Tabs>
     </AppBar>
