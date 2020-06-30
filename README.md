@@ -4,9 +4,9 @@
 
 Starter project from an app using Apollo React DockerCompose and Firebase
 
-##Usage
+## Usage
 
-##Firebase
+## Firebase
 Copy your firebase config from the firebase admin panel into the firebase folder inside the Client.
 
 ### Smart Home
