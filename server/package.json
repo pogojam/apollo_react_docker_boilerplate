@@ -15,7 +15,7 @@
     "aws-sdk": "^2.606.0",
     "axios": "^0.19.0",
     "dotenv": "^8.0.0",
-    "express": "^4.17.1",
+    "express": "^4.19.2",
     "firebase": "^6.3.5",
     "firebase-admin": "^8.3.0",
     "fs-capacitor": "^2.0.4",
